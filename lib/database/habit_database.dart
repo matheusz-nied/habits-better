@@ -52,7 +52,8 @@ class HabitDatabase extends ChangeNotifier {
               date.month == DateTime.now().month &&
               date.day == DateTime.now().day);
         }
-        isar.habits.put(habit);
+        await isar.habits.put(habit);
+        await readHabits(); // Atualiza a lista de hábitos após a atualização
       });
     }
   }
@@ -62,14 +63,14 @@ class HabitDatabase extends ChangeNotifier {
     if (habit != null) {
       await isar.writeTxn(() async {
         habit.name = newName;
-        isar.habits.put(habit);
+        await isar.habits.put(habit);
       });
     }
   }
 
   Future<void> deleteHabit(Habit habit) async {
     await isar.writeTxn(() async {
-      isar.habits.delete(habit.id);
+      await isar.habits.delete(habit.id);
     });
   }
 }
