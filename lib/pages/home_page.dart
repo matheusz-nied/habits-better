@@ -26,6 +26,9 @@ class _HomePageState extends State<HomePage> {
     showDialog(
         context: context,
         builder: (context) => AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(4),
+          ),
                 content: TextField(
                   controller: textController,
                   decoration:
@@ -125,10 +128,11 @@ class _HomePageState extends State<HomePage> {
       ),
       drawer: const MyDrawer(),
       floatingActionButton: FloatingActionButton(
+
         onPressed: createNewHabit,
         elevation: 0,
-        backgroundColor: Theme.of(context).colorScheme.tertiary,
-        child: const Icon(Icons.add),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        child:  Icon(Icons.add, color: Theme.of(context).colorScheme.inversePrimary),
       ),
       body: ListView(
         children: [

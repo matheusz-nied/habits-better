@@ -31,6 +31,8 @@ class HabitDatabase extends ChangeNotifier {
     final newHabit = Habit()..name = habit;
     await isar.writeTxn(() => isar.habits.put(newHabit));
     await readHabits();
+    notifyListeners();
+
   }
 
   Future<void> readHabits() async {

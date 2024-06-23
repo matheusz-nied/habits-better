@@ -11,16 +11,16 @@ class MyHeatMap extends StatelessWidget {
     return HeatMapCalendar(
       datasets: datasets,
       colorMode: ColorMode.color,
-      defaultColor: Theme.of(context).colorScheme.secondary,
+      defaultColor: const Color.fromARGB(255, 30, 30, 30),
       textColor: Colors.white,
       showColorTip: false,
       size: 30,
       colorsets: {
         1: Colors.green.shade100,
-        2: Colors.green.shade300,
-        3: Colors.green.shade600,
+        2: Colors.green.shade500,
+        3: Colors.green.shade800,
         4: Colors.green.shade800,
-        5: Colors.green.shade900,
+        5: Colors.green.shade800,
       },
     );
   }
