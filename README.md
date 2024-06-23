@@ -7,7 +7,7 @@ O Habit Better App é uma aplicação Flutter para ajudar você a criar e gerenc
 ## Images
 
 <p align="center">
-<img src="home.png" alt="App image" width=400>     
+<img src="home.png" alt="App image" width=300>     
 </p>
 
 ## Funcionalidades
